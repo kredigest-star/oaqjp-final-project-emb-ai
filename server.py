@@ -16,6 +16,8 @@ def emotion_detector():
     joy = response['joy']
     sadness = response['sadness']
     dominant_emotion = response['dominant_emotion']
+    if dominant_emotion is None:
+        return "Invalid text! Please try again!"
     return (
         f"For the given statement, the system response is 'anger': {anger}, "
         f"'disgust': {disgust}, 'fear': {fear}, 'joy': {joy} "
